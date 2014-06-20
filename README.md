@@ -1,4 +1,4 @@
-# Angular WURFL Image Tailor [![Build Status](https://travis-ci.org/WURLF/angular-wurfl-image-tailor.png)](https://travis-ci.org/WURLF/angular-wurfl-image-tailor)
+# Angular WURFL Image Tailor [![Build Status](https://travis-ci.org/WURFL/angular-wurfl-image-tailor.png)](https://travis-ci.org/WURFL/angular-wurfl-image-tailor)
 
 > An AngularJS directive for WURFL Image Tailor (WIT)
 
@@ -16,7 +16,7 @@
 * Include `angular-wurfl-image-tailor.js`. It should be located at `bower_components/src/angular-wurfl-image-tailor.js`
 
 ### Install from source
-* [Download Latest Version](https://github.com/WURLF/angular-wurfl-image-tailor/releases) and extract the archive.
+* [Download Latest Version](https://github.com/WURFL/angular-wurfl-image-tailor/releases) and extract the archive.
 * Include `angular-wurfl-image-tailor.js`. It should be located at `archive_path/src/angular-wurfl-image-tailor.js`
 
 ### How to use it
@@ -56,7 +56,7 @@ Check the [WURFL Image Tailor Documentation](http://wurfl.io/documentation/wit-d
 
 ## Authors
 
-- [Luca Corbo](https://github.com/lucor) — [view contributions](https://github.com//WURLF/angular-wurfl-image-tailor/commits?author=lucor)
+- [Luca Corbo](https://github.com/lucor) — [view contributions](https://github.com//WURFL/angular-wurfl-image-tailor/commits?author=lucor)
 
 ## License
 
