@@ -1,0 +1,45 @@
+{
+  "name": "angular-wurfl-image-tailor",
+  "version": "0.9.0",
+  "description": "An AngularJS directive for WURFL Image Tailor (WIT)",
+  "author": "Luca Corbo (https://github.com/lucor)",
+  "maintainers": [
+    "Luca Corbo (https://github.com/lucor)"
+  ],
+  "contributors": [
+    "Luca Corbo (https://github.com/lucor)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WURFL/angular-wurfl-image-tailor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WURFL/angular-wurfl-image-tailor.git"
+  },
+  "keywords": [
+    "angularjs",
+    "wurfl",
+    "wit",
+    "wurfl image tailor",
+    "webcomponent"
+  ],
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "http-server": "^0.6.1",
+    "karma": "~0.12",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.1.4",
+    "karma-phantomjs-launcher": "^0.1.4"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+
+    "prestart": "npm install",
+    "start": "http-server -p 8000",
+
+    "pretest": "npm install",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
+    "test-single-run": "./node_modules/karma/bin/karma start karma.conf.js --single-run"
+  }
+}

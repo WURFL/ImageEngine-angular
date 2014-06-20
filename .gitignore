@@ -1,0 +1,12 @@
+.DS_Store
+/.settings
+/.project
+node_modules
+old/
+tmp/
+.tmp/
+*~
+/nbproject
+.idea
+.grunt
+/bower_components
