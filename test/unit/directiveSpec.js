@@ -5,9 +5,10 @@ describe("Unit: Testing angular directive for WURFL Image Tailor", function() {
     beforeEach(module('angular-wurfl-image-tailor'));
 
     beforeEach(inject(
-        ['$compile','$rootScope', function($c, $r) {
+        ['$compile','$rootScope', '$sce', function($c, $r, $sce) {
             compile = $c;
             scope = $r;
+            sce = $sce;
         }]
     ));
 
@@ -36,6 +37,25 @@ describe("Unit: Testing angular directive for WURFL Image Tailor", function() {
 
         expect(elt.html()).to.be.a('string');
         expect(elt.html()).to.be.equal('<div class="wit"><img src="//wit.wurfl.io/w_200/http://test.com/image.jpg"></div>');
+    });
+
+    it('should work as an element with ngSrc directive', function () {
+        var elt = angular.element('<img-wit ng-src="http://test.com/image.jpg"></img-wit>');
+        compile(elt)(scope);
+        scope.$digest();
+
+        expect(elt.html()).to.be.a('string');
+        expect(elt.html()).to.be.equal('<div class="wit"><img ng-src="//wit.wurfl.io/http://test.com/image.jpg" src="//wit.wurfl.io/http://test.com/image.jpg"></div>');
+    });
+
+    it('should work as an element with ngSrc directive and a trusted resource', function () {
+        scope.myUrl = sce.trustAsResourceUrl('http://test.com/image.jpg');
+        var elt = angular.element('<img-wit ng-src="{{myUrl}}" w="200"></img-wit>');
+        compile(elt)(scope);
+        scope.$digest();
+
+        expect(elt.html()).to.be.a('string');
+        expect(elt.html()).to.be.equal('<div class="wit"><img ng-src="//wit.wurfl.io/w_200/http://test.com/image.jpg" src="//wit.wurfl.io/w_200/http://test.com/image.jpg"></div>');
     });
 
 });

@@ -1,7 +1,7 @@
 /*
- * angular-wurfl-image-tailor v0.9.0
+ * angular-wurfl-image-tailor v0.9.1
  * Authors: Luca Corbo (https://github.com/lucor)
- * (c) 2014 ScientiaMobile, Inc.
+ * (c) 2014 - 2015 ScientiaMobile, Inc.
  * License: MIT
  */
 
@@ -25,13 +25,24 @@ angular.module('angular-wurfl-image-tailor', [])
             restrict: 'E',
             replace: false,
             scope:{},
-            template: '<div class="wit"><img src="{{wit_link}}"/></div>',
+            template: function(element, attributes){
+                if (attributes['ngSrc']) {
+                    return '<div class="wit"><img ng-src="{{wit_link}}"/></div>';
+                } else {
+                    return '<div class="wit"><img src="{{wit_link}}"/></div>';
+                }
+            },
             link: function (scope, element, attributes) {
                 var wit_link_pieces = [witUrls.get()];
-                var src =  attributes['src'];
+                var src;
+                if (attributes['ngSrc']) {
+                    src = attributes['ngSrc'];
+                } else {
+                    src = attributes['src'];
+                }
                 if (!src) return;
                 angular.forEach(attributes['$attr'], function(attr) {
-                    if (attr != 'src') {
+                    if (attr != 'src' && attr != 'ng-src') {
                         wit_link_pieces.push(attr + '_' + attributes[attr]);
                     }
                 });

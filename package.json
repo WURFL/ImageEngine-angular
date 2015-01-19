@@ -1,6 +1,6 @@
 {
   "name": "angular-wurfl-image-tailor",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "An AngularJS directive for WURFL Image Tailor (WIT)",
   "author": "Luca Corbo (https://github.com/lucor)",
   "maintainers": [
