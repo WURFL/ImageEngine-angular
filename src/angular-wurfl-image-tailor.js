@@ -20,7 +20,7 @@ angular.module('angular-wurfl-image-tailor', [])
             }
         };
     })
-    .directive('imgWit', function (witUrls) {
+    .directive('imgWit', ['witUrls', function (witUrls) {
         return {
             restrict: 'E',
             replace: false,
@@ -33,21 +33,20 @@ angular.module('angular-wurfl-image-tailor', [])
                 }
             },
             link: function (scope, element, attributes) {
-                var wit_link_pieces = [witUrls.get()];
-                var src;
-                if (attributes['ngSrc']) {
-                    src = attributes['ngSrc'];
-                } else {
-                    src = attributes['src'];
-                }
-                if (!src) return;
-                angular.forEach(attributes['$attr'], function(attr) {
-                    if (attr != 'src' && attr != 'ng-src') {
-                        wit_link_pieces.push(attr + '_' + attributes[attr]);
-                    }
+                var srcAName = attributes['ngSrc'] ? 'ngSrc' : 'src';
+
+                if(!attributes[srcAName]) return;
+
+                attributes.$observe(srcAName, function (src) {
+                    var wit_link_pieces = [witUrls.get()];
+                    angular.forEach(attributes['$attr'], function (attr) {
+                        if (attr != 'src' && attr != 'ng-src') {
+                            wit_link_pieces.push(attr + '_' + attributes[attr]);
+                        }
+                    });
+                    wit_link_pieces.push(src);
+                    scope.wit_link = wit_link_pieces.join('/');
                 });
-                wit_link_pieces.push(src);
-                scope.wit_link = wit_link_pieces.join('/');
             }
         }
-    });
+    }]);
