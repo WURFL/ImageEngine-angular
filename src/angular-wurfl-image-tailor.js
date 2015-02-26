@@ -26,21 +26,22 @@ angular.module('angular-wurfl-image-tailor', [])
             replace: false,
             scope:{},
             template: function(element, attributes){
-                if (attributes['ngSrc']) {
+                if ('ngSrc' in attributes) {
                     return '<div class="wit"><img ng-src="{{wit_link}}"/></div>';
                 } else {
                     return '<div class="wit"><img src="{{wit_link}}"/></div>';
                 }
             },
             link: function (scope, element, attributes) {
-                var srcAName = attributes['ngSrc'] ? 'ngSrc' : 'src';
-
-                if(!attributes[srcAName]) {
-                    scope.wit_link = '';
-                    return;
-                }
+                var srcAName = 'ngSrc' in attributes ? 'ngSrc' : 'src';
+                scope.wit_link = '';
 
                 attributes.$observe(srcAName, function (src) {
+                    if(!src) {
+                        scope.wit_link = '';
+                        return;
+                    }
+
                     var wit_link_pieces = [witUrls.get()];
                     angular.forEach(attributes['$attr'], function (attr) {
                         if (attr != 'src' && attr != 'ng-src') {
