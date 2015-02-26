@@ -1,5 +1,5 @@
 /*
- * angular-wurfl-image-tailor v0.9.1
+ * angular-wurfl-image-tailor v0.9.2
  * Authors: Luca Corbo (https://github.com/lucor)
  * (c) 2014 - 2015 ScientiaMobile, Inc.
  * License: MIT
@@ -35,7 +35,10 @@ angular.module('angular-wurfl-image-tailor', [])
             link: function (scope, element, attributes) {
                 var srcAName = attributes['ngSrc'] ? 'ngSrc' : 'src';
 
-                if(!attributes[srcAName]) return;
+                if(!attributes[srcAName]) {
+                    scope.wit_link = '';
+                    return;
+                }
 
                 attributes.$observe(srcAName, function (src) {
                     var wit_link_pieces = [witUrls.get()];

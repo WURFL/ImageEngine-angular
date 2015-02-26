@@ -61,9 +61,16 @@ Check the [WURFL Image Tailor Documentation](http://wurfl.io/documentation/wit-d
 * Run: `npm start`
 * Browse: `http://localhost:8000/demo/index.html`
 
+## Testing
+
+``` bash
+$ npm test
+```
+
 ## Authors
 
 - [Luca Corbo](https://github.com/lucor) — [view contributions](https://github.com//WURFL/angular-wurfl-image-tailor/commits?author=lucor)
+- [All Contributors](../../contributors)
 
 ## License
 
