@@ -33,11 +33,11 @@ angular.module('angular-wurfl-image-tailor', [])
                 }
             },
             link: function (scope, element, attributes) {
-                var srcAName = attributes['ngSrc'] ? 'ngSrc' : 'src';
-
-                if(!attributes[srcAName]) return;
+                var srcAName = 'ngSrc' in attributes ? 'ngSrc' : 'src';
 
                 attributes.$observe(srcAName, function (src) {
+                    if(!src) return;
+
                     var wit_link_pieces = [witUrls.get()];
                     angular.forEach(attributes['$attr'], function (attr) {
                         if (attr != 'src' && attr != 'ng-src') {
