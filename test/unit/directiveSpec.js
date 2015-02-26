@@ -58,4 +58,15 @@ describe("Unit: Testing angular directive for WURFL Image Tailor", function() {
         expect(elt.html()).to.be.equal('<div class="wit"><img ng-src="//wit.wurfl.io/w_200/http://test.com/image.jpg" src="//wit.wurfl.io/w_200/http://test.com/image.jpg"></div>');
     });
 
+    it('should change when ngSrc directive variable change', function () {
+        scope.myUrl = sce.trustAsResourceUrl('http://test.com/image.jpg');
+        var elt = angular.element('<img-wit ng-src="{{myUrl}}"></img-wit>');
+        compile(elt)(scope);
+        scope.$digest();
+        scope.myUrl = sce.trustAsResourceUrl('http://test.com/image2.jpg');
+        scope.$digest();
+
+        expect(elt.html()).to.be.a('string');
+        expect(elt.html()).to.be.equal('<div class="wit"><img ng-src="//wit1.wurfl.io/http://test.com/image2.jpg" src="//wit1.wurfl.io/http://test.com/image2.jpg"></div>');
+    });
 });
