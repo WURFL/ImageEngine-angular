@@ -2,6 +2,11 @@
 
 All notable changes to `angular-wurfl-image-tailor` will be documented in this file
 
+## 0.9.3 - 2015-02-27
+
+### Fixed
+- When ngSrc was undefined at the beginning, image wasn't refreshed
+
 ## 0.9.2 - 2015-02-26
 
 ### Added

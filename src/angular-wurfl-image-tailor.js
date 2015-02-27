@@ -1,5 +1,5 @@
 /*
- * angular-wurfl-image-tailor v0.9.2
+ * angular-wurfl-image-tailor v0.9.3
  * Authors: Luca Corbo (https://github.com/lucor)
  * (c) 2014 - 2015 ScientiaMobile, Inc.
  * License: MIT
