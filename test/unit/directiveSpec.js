@@ -18,7 +18,7 @@ describe("Unit: Testing angular directive for WURFL Image Tailor", function() {
         scope.$digest();
 
         expect(elt.html()).to.be.a('string');
-        expect(elt.html()).to.be.equal('<div class="wit"><img src=""></div>');
+        expect(elt.html()).to.be.equal('<div class="wit"><img ng-src=""></div>');
     });
 
     it('should work as an element with image source', function () {
@@ -27,7 +27,7 @@ describe("Unit: Testing angular directive for WURFL Image Tailor", function() {
         scope.$digest();
 
         expect(elt.html()).to.be.a('string');
-        expect(elt.html()).to.be.equal('<div class="wit"><img src="//wit.wurfl.io/http://test.com/image.jpg"></div>');
+        expect(elt.html()).to.be.equal('<div class="wit"><img ng-src="//wit.wurfl.io/http://test.com/image.jpg" src="//wit.wurfl.io/http://test.com/image.jpg"></div>');
     });
 
     it('should work as an element with image source and param attribute', function () {
@@ -36,7 +36,7 @@ describe("Unit: Testing angular directive for WURFL Image Tailor", function() {
         scope.$digest();
 
         expect(elt.html()).to.be.a('string');
-        expect(elt.html()).to.be.equal('<div class="wit"><img src="//wit.wurfl.io/w_200/http://test.com/image.jpg"></div>');
+        expect(elt.html()).to.be.equal('<div class="wit"><img ng-src="//wit.wurfl.io/w_200/http://test.com/image.jpg" src="//wit.wurfl.io/w_200/http://test.com/image.jpg"></div>');
     });
 
     it('should work as an element with ngSrc directive', function () {

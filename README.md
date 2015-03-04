@@ -8,7 +8,6 @@
 
 * Add the img-wit directive
 * Enable out of the box support for the [WIT URLs](http://wurfl.io/documentation/wit-getting-started.php) to download more images in parallel.
-* Allow use of the [ngSrc directive](https://docs.angularjs.org/api/ng/directive/ngSrc)
 
 ## Usage
 
@@ -30,9 +29,9 @@
 
 `<img-wit src="http://yourserver.com/image.png"></img-wit>`
 
-or if you want to use the ngSrc directive:
+or if you want to use interpolation:
 
-`<img-wit ng-src="{{myUrl}}"></img-wit>`
+`<img-wit src="{{myUrl}}"></img-wit>`
 
 where {{myUrl}} is the url of the [trusted image](https://docs.angularjs.org/api/ng/service/$sce) to load. 
 
