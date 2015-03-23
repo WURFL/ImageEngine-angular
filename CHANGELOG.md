@@ -2,7 +2,7 @@
 
 All notable changes to `angular-wurfl-image-tailor` will be documented in this file
 
-## NEXT RELEASE
+## 0.9.4 - 2015-03-23
 
 ### Added
 - $observe expression on all allowed attributes
