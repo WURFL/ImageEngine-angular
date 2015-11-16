@@ -9,3 +9,4 @@ before_script:
   - sleep 1
 script:
   - ./node_modules/.bin/gulp test-all-versions
+sudo: false
