@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var karma = require('karma').server;
+var karma = require('karma').Server;
 var bower = require('gulp-bower');
 
 require('./test/angular-1.2/gulpfile');

@@ -1,8 +1,9 @@
 {
-  "name": "angular-wurfl-image-tailor",
-  "description": "An AngularJS directive for WURFL Image Tailor (WIT)",
-  "version": "0.9.4",
-  "main": "./src/angular-wurfl-image-tailor.js",
+  "name": "image-engine-angular",
+  "description": "An AngularJS directive for ImageEngine",
+  "homepage": "https://github.com/WURFL/ImageEngine-angular",
+  "version": "1.0.0",
+  "main": "./src/image-engine-angular.js",
   "authors": [
     "Luca Corbo (https://github.com/lucor)"
   ],

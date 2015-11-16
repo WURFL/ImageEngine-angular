@@ -1,10 +1,11 @@
 describe("Unit: Testing angular directive for ImageEngine", function() {
 
-    var scope, compile, provider;
+    var scope, compile;
 
     beforeEach(module('image-engine-angular', function(imgEngConfigProvider) {
         provider = imgEngConfigProvider;
         provider.setToken('token');
+        provider.isLite();
     }));
 
     beforeEach(inject(
@@ -30,7 +31,7 @@ describe("Unit: Testing angular directive for ImageEngine", function() {
         scope.$digest();
 
         expect(elt.html()).to.be.a('string');
-        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.imgeng.in/http://test.com/image.jpg" src="//token.imgeng.in/http://test.com/image.jpg"></div>');
+        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.lite.imgeng.in/http://test.com/image.jpg" src="//token.lite.imgeng.in/http://test.com/image.jpg"></div>');
     });
 
     it('should work as an element with image source and param attribute', function () {
@@ -39,7 +40,7 @@ describe("Unit: Testing angular directive for ImageEngine", function() {
         scope.$digest();
 
         expect(elt.html()).to.be.a('string');
-        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.imgeng.in/w_200/http://test.com/image.jpg" src="//token.imgeng.in/w_200/http://test.com/image.jpg"></div>');
+        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.lite.imgeng.in/w_200/http://test.com/image.jpg" src="//token.lite.imgeng.in/w_200/http://test.com/image.jpg"></div>');
     });
 
     it('should work as an element with ngSrc directive', function () {
@@ -48,7 +49,7 @@ describe("Unit: Testing angular directive for ImageEngine", function() {
         scope.$digest();
 
         expect(elt.html()).to.be.a('string');
-        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.imgeng.in/http://test.com/image.jpg" src="//token.imgeng.in/http://test.com/image.jpg"></div>');
+        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.lite.imgeng.in/http://test.com/image.jpg" src="//token.lite.imgeng.in/http://test.com/image.jpg"></div>');
     });
 
     it('should work as an element with ngSrc directive and a trusted resource', function () {
@@ -58,7 +59,7 @@ describe("Unit: Testing angular directive for ImageEngine", function() {
         scope.$digest();
 
         expect(elt.html()).to.be.a('string');
-        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.imgeng.in/w_200/http://test.com/image.jpg" src="//token.imgeng.in/w_200/http://test.com/image.jpg"></div>');
+        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.lite.imgeng.in/w_200/http://test.com/image.jpg" src="//token.lite.imgeng.in/w_200/http://test.com/image.jpg"></div>');
     });
 
     it('should change when ngSrc directive variable change', function () {
@@ -70,7 +71,7 @@ describe("Unit: Testing angular directive for ImageEngine", function() {
         scope.$digest();
 
         expect(elt.html()).to.be.a('string');
-        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.imgeng.in/http://test.com/image2.jpg" src="//token.imgeng.in/http://test.com/image2.jpg"></div>');
+        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.lite.imgeng.in/http://test.com/image2.jpg" src="//token.lite.imgeng.in/http://test.com/image2.jpg"></div>');
     });
 
     it('should change when ngSrc directive variable change from undefined', function () {
@@ -82,7 +83,7 @@ describe("Unit: Testing angular directive for ImageEngine", function() {
         scope.$digest();
 
         expect(elt.html()).to.be.a('string');
-        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.imgeng.in/http://test.com/image2.jpg" src="//token.imgeng.in/http://test.com/image2.jpg"></div>');
+        expect(elt.html()).to.be.equal('<div class="img-eng"><img ng-src="//token.lite.imgeng.in/http://test.com/image2.jpg" src="//token.lite.imgeng.in/http://test.com/image2.jpg"></div>');
     });
 
 });

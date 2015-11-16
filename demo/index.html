@@ -3,31 +3,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>Angular WURFL Image Tailor</title>
+    <title>ImageEngine Angular Demo</title>
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
     <script src="../bower_components/angular/angular.js"></script>
-    <script src="../src/angular-wurfl-image-tailor.js"></script>
+    <script src="../src/image-engine-angular.js"></script>
 
     <script>
-        angular.module('demo-WIT', ['angular-wurfl-image-tailor']);
+        var app = angular.module('demo-ImageEngine', ['image-engine-angular']);
+        app.config(function (imgEngConfigProvider) {
+            imgEngConfigProvider.setToken('try');
+            imgEngConfigProvider.isLite();
+        });
     </script>
 </head>
 
-<body ng-app="demo-WIT">
+<body ng-app="demo-ImageEngine">
 <div class="container">
     <div class="row">
         <h1>Fully Automatic</h1>
 
         <p>
             <code>
-                &lt;img-wit src=&quot;http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG&quot;&gt;&lt;/img-wit&gt;
+                &lt;img-eng src=&quot;http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG&quot;&gt;&lt;/img-eng&gt;
             </code>
         </p>
 
         <p>
-            <img-wit src="http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG"></img-wit>
+            <img-eng src="http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG"></img-eng>
         </p>
     </div>
     <div class="row">
@@ -35,12 +39,12 @@
 
         <p>
             <code>
-                &lt;img-wit src=&quot;http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG&quot; pc=&quot;20&quot;&gt;&lt;/img-wit&gt;
+                &lt;img-eng src=&quot;http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG&quot; pc=&quot;20&quot;&gt;&lt;/img-eng&gt;
             </code>
         </p>
 
         <p>
-            <img-wit src="http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG" pc="20"></img-wit>
+            <img-eng src="http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG" pc="20"></img-eng>
         </p>
     </div>
     <div class="row">
@@ -48,12 +52,12 @@
 
         <p>
             <code>
-                &lt;img-wit src=&quot;http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG&quot; w=&quot;300&quot;&gt;&lt;/img-wit&gt;
+                &lt;img-eng src=&quot;http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG&quot; w=&quot;300&quot;&gt;&lt;/img-eng&gt;
             </code>
         </p>
 
         <p>
-            <img-wit src="http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG" w="300"></img-wit>
+            <img-eng src="http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG" w="300"></img-eng>
         </p>
     </div>
 
@@ -62,12 +66,12 @@
 
         <p>
             <code>
-                &lt;img-wit src=&quot;http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG&quot; w=&quot;200&quot; h=&quot;200&quot; m=&quot;letterbox_000000_100&quot;&gt;&lt;/img-wit&gt;
+                &lt;img-eng src=&quot;http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG&quot; w=&quot;200&quot; h=&quot;200&quot; m=&quot;letterbox_000000_100&quot;&gt;&lt;/img-eng&gt;
             </code>
         </p>
 
         <p>
-            <img-wit src="http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG" w="200" h="200" m="letterbox_000000_100"></img-wit>
+            <img-eng src="http://upload.wikimedia.org/wikipedia/commons/8/82/2011_Trampeltier_1528.JPG" w="200" h="200" m="letterbox_000000_100"></img-eng>
         </p>
     </div>
 </div>

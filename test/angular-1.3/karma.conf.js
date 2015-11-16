@@ -17,7 +17,7 @@ module.exports = function(config) {
 
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      '../../src/angular-wurfl-image-tailor.js',
+      '../../src/image-engine-angular.js',
       '../../test/**/*Spec.js'
     ],
 

@@ -1,7 +1,8 @@
 {
-  "name": "angular-wurfl-image-tailor",
-  "version": "0.9.3",
-  "description": "An AngularJS directive for WURFL Image Tailor (WIT)",
+  "name": "image-engine-angular",
+  "version": "1.0.0",
+  "description": "An AngularJS directive for ImageEngine",
+  "homepage": "https://github.com/WURFL/ImageEngine-angular",
   "author": "Luca Corbo (https://github.com/lucor)",
   "maintainers": [
     "Luca Corbo (https://github.com/lucor)"
@@ -11,34 +12,33 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WURFL/angular-wurfl-image-tailor/issues"
+    "url": "https://github.com/WURFL/ImageEngine-angular/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/WURFL/angular-wurfl-image-tailor.git"
+    "url": "https://github.com/WURFL/ImageEngine-angular.git"
   },
   "keywords": [
     "angularjs",
     "wurfl",
-    "wit",
-    "wurfl image tailor",
+    "ImageEngine",
     "webcomponent"
   ],
   "devDependencies": {
     "chai": "^1.9.1",
     "gulp": "^3.8.11",
-    "gulp-bower": "0.0.10",
-    "gulp-karma": "0.0.4",
-    "http-server": "^0.6.1",
-    "karma": "^0.12",
-    "karma-chai": "^0.1.0",
-    "karma-mocha": "^0.1.4",
-    "karma-phantomjs-launcher": "^0.1.4"
+    "gulp-bower": "^0.0.10",
+    "http-server": "^0.6",
+    "karma": "^0.13",
+    "karma-chai": "^0.1",
+    "karma-mocha": "^0.1",
+    "karma-phantomjs-launcher": "^0.1",
+    "mocha": "^2.3.4"
   },
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
-    "start": "http-server -p 8000",
+    "start": "http-server -p 9999",
     "pretest": "npm install",
     "test": "./node_modules/.bin/gulp",
     "test-single-run": "./node_modules/.bin/gulp test"

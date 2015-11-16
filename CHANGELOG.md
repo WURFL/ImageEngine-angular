@@ -1,6 +1,19 @@
 # Changelog
 
-All notable changes to `angular-wurfl-image-tailor` will be documented in this file
+All notable changes to `image-engine-angular` will be documented in this file
+
+## 1.0.0 - 2015-11-16
+
+### Changed
+- WURFL Image Tailor (WIT) is now ImageEngine
+
+### Added
+- Token support
+- Flag to switch between "ImageEngine" and "ImageEngine Lite"
+
+### Updated
+- Base Urls
+- Tests
 
 ## 0.9.4 - 2015-03-23
 
