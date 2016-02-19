@@ -1,3 +1,4 @@
+'use strict';
 /*
  * image-engine-angular
  * An AngularJS directive for ImageEngine
@@ -21,7 +22,7 @@ angular.module('image-engine-angular', [])
             return this;
         };
     })
-    .factory('imgEngUrls', function (imgEngConfig) {
+    .factory('imgEngUrls', ['imgEngConfig', function (imgEngConfig) {
         var base_url = ['//' + imgEngConfig.token];
 
         if (imgEngConfig.is_lite === true) {
@@ -35,7 +36,7 @@ angular.module('image-engine-angular', [])
                 return base_url.join('.');
             }
         };
-    })
+    }])
     .directive('imgEng', ['imgEngUrls', function (imgEngUrls) {
         return {
             restrict: 'E',
@@ -75,5 +76,5 @@ angular.module('image-engine-angular', [])
                     scope.imgeng_link = imgeng_link_pieces.join('/');
                 });
             }
-        }
+        };
     }]);
