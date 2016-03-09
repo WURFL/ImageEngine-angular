@@ -4,7 +4,7 @@
  * An AngularJS directive for ImageEngine
  * Homepage: https://github.com/WURFL/ImageEngine-angular
  * Authors: Luca Corbo (https://github.com/lucor)
- * (c) 2014 - 2015 ScientiaMobile, Inc.
+ * (c) 2014 - 2016 ScientiaMobile, Inc.
  * License: MIT
  */
 

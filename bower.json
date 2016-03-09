@@ -2,7 +2,7 @@
   "name": "image-engine-angular",
   "description": "An AngularJS directive for ImageEngine",
   "homepage": "https://github.com/WURFL/ImageEngine-angular",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./src/image-engine-angular.js",
   "authors": [
     "Luca Corbo (https://github.com/lucor)"
