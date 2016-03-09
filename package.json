@@ -25,15 +25,16 @@
     "webcomponent"
   ],
   "devDependencies": {
-    "chai": "^1.9.1",
-    "gulp": "^3.8.11",
-    "gulp-bower": "^0.0.10",
-    "http-server": "^0.6",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-bower": "^0.0.13",
+    "http-server": "^0.9",
     "karma": "^0.13",
     "karma-chai": "^0.1",
-    "karma-mocha": "^0.1",
-    "karma-phantomjs-launcher": "^0.1",
-    "mocha": "^2.3.4"
+    "karma-mocha": "^0.2",
+    "karma-phantomjs-launcher": "^1.0",
+    "phantomjs-prebuilt": "^2.1.3",
+    "mocha": "^2.4.5"
   },
   "scripts": {
     "postinstall": "bower install",
@@ -41,6 +42,7 @@
     "start": "http-server -p 9999",
     "pretest": "npm install",
     "test": "./node_modules/.bin/gulp",
-    "test-single-run": "./node_modules/.bin/gulp test"
+    "test-single-run": "./node_modules/.bin/gulp test",
+    "test-all-versions": "./node_modules/.bin/gulp test-all-versions"
   }
 }
