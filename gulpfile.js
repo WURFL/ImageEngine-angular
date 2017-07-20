@@ -1,16 +1,16 @@
 var gulp = require('gulp');
 var karma = require('karma').Server;
-var bower = require('gulp-bower');
 
 require('./test/angular-1.2/gulpfile');
 require('./test/angular-1.3/gulpfile');
 require('./test/angular-1.4/gulpfile');
 require('./test/angular-1.5/gulpfile');
+require('./test/angular-1.6/gulpfile');
 
 /**
  * Run tests for all angular versions
  */
-gulp.task('test-all-versions', ['test-1.2', 'test-1.3', 'test-1.4', 'test-1.5'], function (done) {
+gulp.task('test-all-versions', ['test-1.2', 'test-1.3', 'test-1.4', 'test-1.5', 'test-1.6'], function (done) {
 });
 
 /**

@@ -1,0 +1,21 @@
+{
+  "name": "image-engine-angular",
+  "description": "An AngularJS directive for ImageEngine",
+  "authors": [
+    "Luca Corbo (https://github.com/lucor)"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "angular": "~1.6.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.6.0"
+  }
+}
