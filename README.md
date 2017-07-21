@@ -52,7 +52,6 @@ WebP is a lightweight image format with great quality. WebP is well supported by
     var app = angular.module("demoapp", ["image-engine-angular"]);
     app.config(function (imgEngConfigProvider) {
        imgEngConfigProvider.setToken('your-token');
-       imgEngConfigProvider.isLite(); // Add this line only for ImageEngine Lite
     });
 ```
 

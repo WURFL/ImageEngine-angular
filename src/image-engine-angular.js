@@ -16,6 +16,7 @@ angular.module('image-engine-angular', [])
             this.token = token;
         };
         this.isLite = function () {
+            // Deprecated method since 1.0.2
             this.is_lite = true;
         };
         this.$get = function () {
