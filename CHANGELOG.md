@@ -2,6 +2,28 @@
 
 All notable changes to `image-engine-angular` will be documented in this file
 
+## 1.0.2 - 2017-07-20
+
+### Added
+- Crop (`cr`) parameter support
+- Compression (`cmpr`) parameter support
+- Inline (`in`) parameter support
+- Tests for AngularJS versions 1.6.x
+
+### Deprecated
+- isLite() method
+
+## 1.0.1 - 2016-03-09
+
+### Added
+- Tests for AngularJS versions 1.5.x
+
+### Updated
+- Dev dependencies
+
+### Fixed
+- strict mode error: function(imgEngConfig) is not using explicit annotation and cannot be invoked in strict mode (#4)
+
 ## 1.0.0 - 2015-11-16
 
 ### Changed

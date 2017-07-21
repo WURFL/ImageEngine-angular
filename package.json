@@ -1,13 +1,10 @@
 {
   "name": "image-engine-angular",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An AngularJS directive for ImageEngine",
   "homepage": "https://github.com/WURFL/ImageEngine-angular",
   "author": "Luca Corbo (https://github.com/lucor)",
   "maintainers": [
-    "Luca Corbo (https://github.com/lucor)"
-  ],
-  "contributors": [
     "Luca Corbo (https://github.com/lucor)"
   ],
   "license": "MIT",
@@ -24,6 +21,9 @@
     "ImageEngine",
     "webcomponent"
   ],
+  "dependencies": {
+    "angular": "^1.2.0"
+  },
   "devDependencies": {
     "chai": "^4.1.0",
     "gulp": "^3.9.1",
@@ -37,7 +37,6 @@
     "phantomjs-prebuilt": "^2.1.3"
   },
   "scripts": {
-    "postinstall": "bower install",
     "prestart": "npm install",
     "start": "http-server -p 9999",
     "pretest": "npm install",
