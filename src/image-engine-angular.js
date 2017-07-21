@@ -4,7 +4,7 @@
  * An AngularJS directive for ImageEngine
  * Homepage: https://github.com/WURFL/ImageEngine-angular
  * Authors: Luca Corbo (https://github.com/lucor)
- * (c) 2014 - 2016 ScientiaMobile, Inc.
+ * (c) 2014 - 2017 ScientiaMobile, Inc.
  * License: MIT
  */
 
@@ -48,7 +48,10 @@ angular.module('image-engine-angular', [])
                 pc: '@',
                 m: '@',
                 f: '@',
-                r: '@'
+                r: '@',
+                cr: '@',
+                cmpr: '@',
+                in: '@'
             },
             template: function (element, attributes) {
                 return '<div class="img-eng"><img ng-src="{{imgeng_link}}"/></div>';
@@ -56,9 +59,9 @@ angular.module('image-engine-angular', [])
             link: function (scope, element, attributes) {
                 scope.imgeng_link = '';
 
-                var allowedAttributes = ['w', 'h', 'pc', 'm', 'f', 'r'];
+                var allowedAttributes = ['w', 'h', 'pc', 'm', 'f', 'r', 'cr', 'cmpr', 'in'];
 
-                scope.$watchCollection('[src, w, h, pc, m, f, r]', function (values, oldValues) {
+                scope.$watchCollection('[src, w, h, pc, m, f, r, cr, cmpr, in]', function (values, oldValues) {
 
                     var src = values.shift();
                     if (!src) {
