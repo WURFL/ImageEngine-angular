@@ -2,6 +2,11 @@
 
 All notable changes to `image-engine-angular` will be documented in this file
 
+## 1.0.3 - 2017-08-01
+
+### Updated
+- Defines AngularJS as peer dependency
+
 ## 1.0.2 - 2017-07-20
 
 ### Added

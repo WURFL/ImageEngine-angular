@@ -21,7 +21,7 @@
     "ImageEngine",
     "webcomponent"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "angular": "^1.2.0"
   },
   "devDependencies": {
